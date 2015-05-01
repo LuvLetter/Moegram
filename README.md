@@ -1,6 +1,8 @@
 # Moegram
 
-This project adds an opinion to display Google's Emoji Font. 
+This project adds an opinion to display Google's Emoji Font.
+
+[Download Moegram from Google Play](https://play.google.com/store/apps/details?id=me.swineson.moegram.messenger)
 
 --------------
 
