@@ -85,4 +85,12 @@ android {
         versionCode 492
         versionName "2.7.0"
     }
+
+    productFlavors {
+        Moegram {
+            applicationId "me.swineson.moegram.messenger"
+            versionCode 505
+            versionName "0.0.2"
+        }
+    }
 }
