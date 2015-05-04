@@ -3,7 +3,8 @@
 This project adds an option to display Google's Emoji Font.
 
 [Download Moegram from Google Play](https://play.google.com/store/apps/details?id=me.swineson.moegram.messenger)
-[Visit releases page](releases)
+
+[Visit releases page](https://github.com/Jamesits/Moegram/releases)
 
 --------------
 
