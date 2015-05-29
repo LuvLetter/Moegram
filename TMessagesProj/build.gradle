@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.3'
+        classpath 'com.android.tools.build:gradle:1.2.3'
     }
 }
 apply plugin: 'com.android.application'
@@ -81,15 +81,15 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 22
-        versionCode 521
-        versionName "2.8.1"
+        versionCode 542
+        versionName "2.9.1"
     }
 
     productFlavors {
         Moegram {
             applicationId "me.swineson.moegram.messenger"
-            versionCode 508
-            versionName "0.0.5"
+            versionCode 509
+            versionName "0.0.6"
         }
     }
 }
