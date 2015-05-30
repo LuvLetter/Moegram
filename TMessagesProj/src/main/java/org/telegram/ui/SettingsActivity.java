@@ -1101,7 +1101,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 } else if (i == sendByEnterRow) {
                     textCell.setTextAndCheck(LocaleController.getString("SendByEnter", R.string.SendByEnter), preferences.getBoolean("send_by_enter", false), false);
                 } else if (i == useSystemEmojiRow) {
-                    textCell.setTextAndCheck(LocaleController.getString("UseSystemEmoji", R.string.UseSystemEmoji), preferences.getBoolean("use_system_emoji", false), false);
+                    textCell.setTextAndCheck(LocaleController.getString("UseSystemEmoji", R.string.UseSystemEmoji), preferences.getBoolean("use_system_emoji", false), true);
                 } else if (i == saveToGalleryRow) {
                     textCell.setTextAndCheck(LocaleController.getString("SaveToGallerySettings", R.string.SaveToGallerySettings), MediaController.getInstance().canSaveToGallery(), false);
                 }
