@@ -430,14 +430,19 @@ public class Emoji {
     public static CharSequence replaceEmoji(CharSequence cs, Paint.FontMetricsInt fontMetrics, int size) {
         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
         boolean use = preferences.getBoolean("use_system_emoji", false);
-        if (use == true || cs == null || cs.length() == 0) {
-            return cs;
-        }
         Spannable s;
         if (cs instanceof Spannable) {
             s = (Spannable)cs;
         } else {
             s = Spannable.Factory.getInstance().newSpannable(cs);
+        }
+        try {
+            if (use == true || cs == null || cs.length() == 0) {
+                return s;
+            }
+        } catch (Exception e) {
+            FileLog.e("tmessages", e);
+            return cs;
         }
         long buf = 0;
         int emojiCount = 0;
