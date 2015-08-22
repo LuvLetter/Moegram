@@ -298,6 +298,7 @@
     <string name="MessagesSettings">Messages</string>
     <string name="SendByEnter">Send by Enter</string>
     <string name="UseSystemEmoji">Use System Emoji</string>
+    <string name="bigEmojiPage">Show Big Emoji Keyboard</string>
     <string name="TerminateAllSessions">Terminate All Other Sessions</string>
     <string name="Events">Events</string>
     <string name="ContactJoined">Contact joined Telegram</string>

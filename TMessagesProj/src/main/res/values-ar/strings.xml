@@ -839,4 +839,5 @@
     <!--update text-->
     <string name="updateText">تم تحديث تيليجرام نسخة الاندرويد. الجديد في نسخة ٣.١.٢: \n\n- كلمات البحث الحديثة. \n- اضغط باستمرار لاستعراض الملصق قبل إرساله.</string>
     <string name="updateBuild">583</string>
+    <string name="bigEmojiPage">Show Big Emoji Keyboard</string>
 </resources>

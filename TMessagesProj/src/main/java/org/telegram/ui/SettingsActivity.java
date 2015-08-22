@@ -128,6 +128,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
     private int stickersRow;
     private int sendByEnterRow;
     private int useSystemEmojiRow;
+    private int bigEmojiPageRow;
     private int supportSectionRow;
     private int supportSectionRow2;
     private int askQuestionRow;
@@ -243,6 +244,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         stickersRow = rowCount++;
         sendByEnterRow = rowCount++;
         useSystemEmojiRow = rowCount++;
+        bigEmojiPageRow = rowCount++;
         supportSectionRow = rowCount++;
         supportSectionRow2 = rowCount++;
         askQuestionRow = rowCount++;
@@ -475,6 +477,15 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                     boolean use = preferences.getBoolean("use_system_emoji", false);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("use_system_emoji", !use);
+                    editor.commit();
+                    if (view instanceof TextCheckCell) {
+                        ((TextCheckCell) view).setChecked(!use);
+                    }
+                } else if (i == bigEmojiPageRow) {
+                    SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
+                    boolean use = preferences.getBoolean("keyboard_big_emoji", false);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("keyboard_big_emoji", !use);
                     editor.commit();
                     if (view instanceof TextCheckCell) {
                         ((TextCheckCell) view).setChecked(!use);
@@ -1174,9 +1185,11 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 if (i == enableAnimationsRow) {
                     textCell.setTextAndCheck(LocaleController.getString("EnableAnimations", R.string.EnableAnimations), preferences.getBoolean("view_animations", true), false);
                 } else if (i == sendByEnterRow) {
-                    textCell.setTextAndCheck(LocaleController.getString("SendByEnter", R.string.SendByEnter), preferences.getBoolean("send_by_enter", false), true);
+                    textCell.setTextAndCheck(LocaleController.getString("SendByEnter", R.string.SendByEnter), preferences.getBoolean("send_by_enter", false), false);
                 } else if (i == useSystemEmojiRow) {
                     textCell.setTextAndCheck(LocaleController.getString("UseSystemEmoji", R.string.UseSystemEmoji), preferences.getBoolean("use_system_emoji", true), false);
+                }else if (i == bigEmojiPageRow) {
+                    textCell.setTextAndCheck(LocaleController.getString("bigEmojiPage", R.string.bigEmojiPage), preferences.getBoolean("keyboard_big_emoji", false), true);
                 } else if (i == saveToGalleryRow) {
                     textCell.setTextAndCheck(LocaleController.getString("SaveToGallerySettings", R.string.SaveToGallerySettings), MediaController.getInstance().canSaveToGallery(), false);
                 }
