@@ -839,4 +839,5 @@
     <!--update text-->
     <string name="updateText">Seu Telegram para Android acaba de ser atualizado. Novo na versão 3.1.2\n\n- Resultados das buscas recentes\n- Pressione e mantenha em um sticker para pré-visualizar antes do envio</string>
     <string name="updateBuild">583</string>
+    <string name="bigEmojiPage">Show Big Emoji Keyboard</string>
 </resources>

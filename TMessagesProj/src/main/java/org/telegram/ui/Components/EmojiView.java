@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -36,12 +37,15 @@ import org.telegram.android.Emoji;
 import org.telegram.android.LocaleController;
 import org.telegram.android.NotificationCenter;
 import org.telegram.android.query.StickersQuery;
+import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.FileLog;
 import org.telegram.messenger.R;
 import org.telegram.messenger.TLRPC;
 import org.telegram.ui.Cells.EmptyCell;
 import org.telegram.ui.Cells.StickerEmojiCell;
 import org.telegram.ui.StickerPreviewViewer;
+
+import com.amulyakhare.textdrawable.TextDrawable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -1017,6 +1021,37 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
                     }
                 } else {
                     ((EmptyCell) view).setHeight(AndroidUtilities.dp(82));
+                }
+            }
+
+            SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
+            if (preferences.getBoolean("use_system_emoji", true)) {
+                if (view instanceof ImageView) {
+                    ImageView imageView = (ImageView) view;
+                    String convert = convert((long) imageView.getTag());
+                    try {
+                        // Emoji.java Line 211-216
+                        int drawImgSize = AndroidUtilities.dp(20);
+                        int bigImgSize;
+                        if (AndroidUtilities.isTablet()) {
+                            bigImgSize = AndroidUtilities.dp(40);
+                        } else {
+                            bigImgSize = AndroidUtilities.dp(32);
+                        }
+                        imageView.setImageDrawable(TextDrawable.builder()
+                                .beginConfig()
+                                .textColor(Color.BLACK)
+                                .fontSize(preferences.getBoolean("keyboard_big_emoji", false) ? bigImgSize : drawImgSize)
+                                .endConfig()
+                                .buildRect(convert, Color.TRANSPARENT));
+                    } catch (Exception ignored) {
+                        imageView.setImageDrawable(TextDrawable.builder()
+                                .beginConfig()
+                                .textColor(Color.BLACK)
+                                .endConfig()
+                                .buildRect(convert, Color.TRANSPARENT));
+
+                    }
                 }
             }
             return view;

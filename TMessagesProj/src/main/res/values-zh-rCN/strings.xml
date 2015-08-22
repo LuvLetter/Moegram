@@ -836,4 +836,5 @@ https://telegram.org/update</string>
   <string name="Recent">最近</string>
   <string name="NoSharedLinks">您可以分享这个会话中的链接，并在您的所有已登录设备上访问。</string>
   <string name="LinksTitle">共享的链接</string>
+  <string name="bigEmojiPage">表情键盘显示大表情</string>
 </resources>

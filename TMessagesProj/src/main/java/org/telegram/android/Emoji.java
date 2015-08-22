@@ -432,7 +432,7 @@ public class Emoji {
 
     public static CharSequence replaceEmoji(CharSequence cs, Paint.FontMetricsInt fontMetrics, int size, boolean createNew) {
         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
-        boolean use = preferences.getBoolean("use_system_emoji", false);
+        boolean use = preferences.getBoolean("use_system_emoji", true);
         if (cs == null || cs.length() == 0) {
             return cs;
         }
