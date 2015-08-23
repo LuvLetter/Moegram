@@ -839,5 +839,4 @@
     <!--update text-->
     <string name="updateText">Telegram voor Android is bijgewerkt. Nieuw in versie 3.1.2:\n\n- Recente zoekresultaten\n- Stickers aantikken en vasthouden om een voorbeeld weer te geven voor het versturen.</string>
     <string name="updateBuild">583</string>
-    <string name="bigEmojiPage">Show Big Emoji Keyboard</string>
 </resources>
