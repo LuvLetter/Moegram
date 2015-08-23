@@ -1146,33 +1146,29 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
             SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
             if (preferences.getBoolean("use_system_emoji", true)) {
-                if (imageView instanceof ImageView) {
-                    //ImageView imageView = (ImageView) imageView;
-                    String convert = convert((long) imageView.getTag());
-                    try {
-                        // Emoji.java Line 211-216
-                        int drawImgSize = AndroidUtilities.dp(20);
-                        int bigImgSize;
-                        if (AndroidUtilities.isTablet()) {
-                            bigImgSize = AndroidUtilities.dp(40);
-                        } else {
-                            bigImgSize = AndroidUtilities.dp(32);
-                        }
-
-                        imageView.setImageDrawable(TextDrawable.builder()
-                                .beginConfig()
-                                .textColor(Color.BLACK)
-                                .fontSize(preferences.getBoolean("keyboard_big_emoji", false) ? bigImgSize : drawImgSize)
-                                .endConfig()
-                                .buildRect(convert, Color.TRANSPARENT));
-                    } catch (Exception ignored) {
-                        imageView.setImageDrawable(TextDrawable.builder()
-                                .beginConfig()
-                                .textColor(Color.BLACK)
-                                .endConfig()
-                                .buildRect(convert, Color.TRANSPARENT));
-
+                String convert = convert((long) imageView.getTag());
+                try {
+                    // Emoji.java Line 212-216
+                    int bigImgSize;
+                    if (AndroidUtilities.isTablet()) {
+                        bigImgSize = AndroidUtilities.dp(40);
+                    } else {
+                        bigImgSize = AndroidUtilities.dp(32);
                     }
+
+                    imageView.setImageDrawable(TextDrawable.builder()
+                            .beginConfig()
+                            .textColor(Color.BLACK)
+                            .fontSize(bigImgSize)
+                            .endConfig()
+                            .buildRect(convert, Color.TRANSPARENT));
+                } catch (Exception ignored) {
+                    imageView.setImageDrawable(TextDrawable.builder()
+                            .beginConfig()
+                            .textColor(Color.BLACK)
+                            .endConfig()
+                            .buildRect(convert, Color.TRANSPARENT));
+
                 }
             }
             return imageView;
