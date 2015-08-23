@@ -6,6 +6,11 @@ This project adds an option to display Google's Emoji Font.
 
 [Visit releases page](https://github.com/Jamesits/Moegram/releases)
 
+## Thanks
+
+ * [kaoyusu/XposedMod_TelegramWithAndroidEmoji](https://github.com/kaoyusu/XposedMod_TelegramWithAndroidEmoji)
+ * [com.amulyakhare.textdrawable.TextDrawable](https://github.com/amulyakhare/TextDrawable)
+
 --------------
 
 ## Telegram messenger for Android
