@@ -128,7 +128,6 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
     private int stickersRow;
     private int sendByEnterRow;
     private int useSystemEmojiRow;
-    private int bigEmojiPageRow;
     private int supportSectionRow;
     private int supportSectionRow2;
     private int askQuestionRow;
@@ -244,7 +243,6 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
         stickersRow = rowCount++;
         sendByEnterRow = rowCount++;
         useSystemEmojiRow = rowCount++;
-        bigEmojiPageRow = rowCount++;
         supportSectionRow = rowCount++;
         supportSectionRow2 = rowCount++;
         askQuestionRow = rowCount++;
@@ -477,15 +475,6 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                     boolean use = preferences.getBoolean("use_system_emoji", false);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("use_system_emoji", !use);
-                    editor.commit();
-                    if (view instanceof TextCheckCell) {
-                        ((TextCheckCell) view).setChecked(!use);
-                    }
-                } else if (i == bigEmojiPageRow) {
-                    SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
-                    boolean use = preferences.getBoolean("keyboard_big_emoji", false);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putBoolean("keyboard_big_emoji", !use);
                     editor.commit();
                     if (view instanceof TextCheckCell) {
                         ((TextCheckCell) view).setChecked(!use);
@@ -1091,7 +1080,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                     i == askQuestionRow || i == sendLogsRow || i == sendByEnterRow || i == privacyRow || i == wifiDownloadRow ||
                     i == mobileDownloadRow || i == clearLogsRow || i == roamingDownloadRow  || i == languageRow || i == usernameRow ||
                     i == switchBackendButtonRow || i == telegramFaqRow || i == contactsSortRow || i == contactsReimportRow || i == saveToGalleryRow ||
-                    i == useSystemEmojiRow || i == bigEmojiPageRow || i == stickersRow;
+                    i == useSystemEmojiRow || i == stickersRow;
 
         }
 
@@ -1187,9 +1176,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
                 } else if (i == sendByEnterRow) {
                     textCell.setTextAndCheck(LocaleController.getString("SendByEnter", R.string.SendByEnter), preferences.getBoolean("send_by_enter", false), true);
                 } else if (i == useSystemEmojiRow) {
-                    textCell.setTextAndCheck(LocaleController.getString("UseSystemEmoji", R.string.UseSystemEmoji), preferences.getBoolean("use_system_emoji", true), true);
-                }else if (i == bigEmojiPageRow) {
-                    textCell.setTextAndCheck(LocaleController.getString("bigEmojiPage", R.string.bigEmojiPage), preferences.getBoolean("keyboard_big_emoji", false), false);
+                    textCell.setTextAndCheck(LocaleController.getString("UseSystemEmoji", R.string.UseSystemEmoji), preferences.getBoolean("use_system_emoji", true), false);
                 } else if (i == saveToGalleryRow) {
                     textCell.setTextAndCheck(LocaleController.getString("SaveToGallerySettings", R.string.SaveToGallerySettings), MediaController.getInstance().canSaveToGallery(), false);
                 }
@@ -1294,7 +1281,7 @@ public class SettingsActivity extends BaseFragment implements NotificationCenter
             }
             if (i == settingsSectionRow || i == supportSectionRow || i == messagesSectionRow || i == mediaDownloadSection || i == contactsSectionRow) {
                 return 1;
-            } else if (i == enableAnimationsRow || i == sendByEnterRow || i == saveToGalleryRow || i == useSystemEmojiRow || i==bigEmojiPageRow) {
+            } else if (i == enableAnimationsRow || i == sendByEnterRow || i == saveToGalleryRow || i == useSystemEmojiRow) {
                 return 3;
             } else if (i == notificationRow || i == backgroundRow || i == askQuestionRow || i == sendLogsRow || i == privacyRow || i == clearLogsRow || i == switchBackendButtonRow || i == telegramFaqRow || i == contactsReimportRow || i == textSizeRow || i == languageRow || i == contactsSortRow || i == stickersRow) {
                 return 2;
