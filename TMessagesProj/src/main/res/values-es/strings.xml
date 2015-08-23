@@ -839,5 +839,4 @@
     <!--update text-->
     <string name="updateText">Telegram para Android fue actualizada. Novedades en la versión 3.1.2:\n\n- Búsquedas recientes\n- Mantén pulsado sobre un sticker para obtener una vista previa antes de enviarlo</string>
     <string name="updateBuild">583</string>
-    <string name="bigEmojiPage">Show Big Emoji Keyboard</string>
 </resources>
