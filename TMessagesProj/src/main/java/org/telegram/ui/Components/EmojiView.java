@@ -1592,6 +1592,8 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
 
             SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Activity.MODE_PRIVATE);
             if (preferences.getBoolean("use_system_emoji", true)) {
+                // TODO: when Android supports native colored Emoji, change this line.
+                String convert = code;
                 try {
                     // Emoji.java Line 212-216
                     int bigImgSize;
@@ -1606,13 +1608,13 @@ public class EmojiView extends FrameLayout implements NotificationCenter.Notific
                             .textColor(Color.BLACK)
                             .fontSize(bigImgSize)
                             .endConfig()
-                            .buildRect(coloredCode, Color.TRANSPARENT));
+                            .buildRect(convert, Color.TRANSPARENT));
                 } catch (Exception ignored) {
                     imageView.setImageDrawable(TextDrawable.builder()
                             .beginConfig()
                             .textColor(Color.BLACK)
                             .endConfig()
-                            .buildRect(coloredCode, Color.TRANSPARENT));
+                            .buildRect(convert, Color.TRANSPARENT));
 
                 }
             }
