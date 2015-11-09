@@ -975,13 +975,8 @@
     <string name="formatterDay12H">h:mm a</string>
     <string name="formatDateAtTime">%1$s الساعة %2$s</string>
     <!--update text-->
-<<<<<<< HEAD
-    <string name="updateText">تم تحديث تيليجرام نسخة الآندرويد. الجديد في نسخة 3.2.0:\n\n- إضافة خدمة القنوات - وسيلة جديدة رائعة لإرسال الرسائل الجماعية لعدد لا محدود من الجماهير (تستبدل الرسائل الجماعية القديمة). \n\n- اللاستزادة، اقرأ هنا: https://telegram.org/blog/channels</string>
-    <string name="updateBuild">614</string>
     <string name="AppName">Moegram</string>
     <string name="UseSystemEmoji">Use System Emoji</string>
-=======
     <string name="updateText">تم تحديث تيليجرام على الأندرويد. الجديد في النسخة رقم 3.2.5:\n\n- تحسين للواجهة البصرية للتطبيق\n- دعم للإيموجي الجديدة\n- تحسينات أخرى وإصلاح للثغرات</string>
     <string name="updateBuild">647</string>
->>>>>>> 496c336d5f80947ebce64087cc9740b3d28ee99d
 </resources>

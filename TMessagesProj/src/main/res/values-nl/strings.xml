@@ -976,12 +976,7 @@
     <string name="formatterDay12H">h:mm a</string>
     <string name="formatDateAtTime">%1$s om %2$s</string>
     <!--update text-->
-<<<<<<< HEAD
-    <string name="updateText">Telegram voor Android is bijgewerkt. Nieuw in versie 3.2.0:\n\n- Nieuw, kanalen - een perfecte manier om berichten naar een ongelimiteerd publiek te versturen (vervangt de oude verzendlijsten).\n\nMeer over deze update: https://telegram.org/blog/channels</string>
-    <string name="updateBuild">614</string>
     <string name="AppName">Moegram</string>
-=======
     <string name="updateText">Telegram voor Android is bijgewerkt. Nieuw in versie 3.2.5:\n\n- Nieuwe animaties en andere visuele verbeteringen\n- Ondersteuning voor nieuwe Emoji\n-Tijdsaanduiding voor laatst gezien gelijk aan iOS\n-Probleemoplossing en andere verbeteringen</string>
     <string name="updateBuild">647</string>
->>>>>>> 496c336d5f80947ebce64087cc9740b3d28ee99d
 </resources>
