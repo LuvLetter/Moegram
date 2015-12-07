@@ -1,6 +1,6 @@
 # Moegram
 
-This project adds an option to display Google's Emoji Font.
+This project adds an option to display Google's Emoji Font and keeps minimal changes to other part of the application.
 
 [Download Moegram from Google Play](https://play.google.com/store/apps/details?id=me.swineson.moegram.messenger)
 
