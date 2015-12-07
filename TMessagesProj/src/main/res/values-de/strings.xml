@@ -3,7 +3,7 @@
 <!--Translation by iLLogical2007, DanielGroeger and everyone from https://github.com/DrKLO/Telegram/pull/129 whom I didn't notice -->
 
 <resources>
-    <string name="AppName">Telegram</string>
+    <string name="AppName">Moegram</string>
     <string name="AppNameBeta">Telegram Beta</string>
     <string name="LanguageName">Deutsch</string>
     <string name="LanguageNameInEnglish">German</string>
@@ -1012,4 +1012,5 @@
     <!--update text-->
     <string name="updateText">Telegram für Android wurde aktualisiert. Neu in Version 3.3.0:\n\n- Gruppen erlauben ab sofort Administratoren: Diese können den Gruppennamen und das Bild ändern sowie Mitglieder hinzufügen und auch wieder entfernen.\n- Gruppen, die das Limit von 200 Mitgliedern erreicht haben, können in eine Supergruppe (1000 Mitglieder) geändert werden.\n- Kanäle unterstützen schnelles Teilen über den Knopf neben jeder Nachricht.\n\nAusführliche Informationen zu den neuen Funktionen in unserem Blog:\nhttps://telegram.org/blog/supergroups</string>
     <string name="updateBuild">677</string>
+    <string name="UseSystemEmoji">Use System Emoji Font</string>
 </resources>

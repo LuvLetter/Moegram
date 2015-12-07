@@ -3,7 +3,7 @@
 
 
 <resources>
-    <string name="AppName">Telegram</string>
+    <string name="AppName">Moegram</string>
     <string name="AppNameBeta">Telegram Beta</string>
     <string name="LanguageName">English</string>
     <string name="LanguageNameInEnglish">English</string>
@@ -1012,4 +1012,5 @@
     <!--update text-->
     <string name="updateText">Telegram for Android has been updated. New in version 3.3.0:\n\n- Groups can now have multiple administrators with the ability to edit the name and logo, and add and remove members.\n- Groups that have reached their capacity of 200 users can be upgraded to supergroups of up to 1,000 members.\n- Channels got a new Quick Share button right next to messages.\n\nMore about this update:\nhttps://telegram.org/blog/supergroups</string>
     <string name="updateBuild">677</string>
+    <string name="UseSystemEmoji">Use System Emoji Font</string>
 </resources>

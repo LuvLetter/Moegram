@@ -3,7 +3,7 @@
 <!--https://www.transifex.com/projects/p/telegram/language/it/members/-->
 
 <resources>
-    <string name="AppName">Telegram</string>
+    <string name="AppName">Moegram</string>
     <string name="AppNameBeta">Telegram Beta</string>
     <string name="LanguageName">Italiano</string>
     <string name="LanguageNameInEnglish">Italian</string>
@@ -1012,4 +1012,5 @@
     <!--update text-->
     <string name="updateText">Telegram per Android si è aggiornato. Nuovo nella versione 3.3.0:\n\n- I gruppi ora possono avere più amministratori, con l\'abilità di modificare il nome e l\'immagine, e di aggiungere e rimuovere membri.\n- I gruppi che hanno raggiunto i 200 membri possono ora essere aggiornati a supergruppi e avere fino a 1000 membri.\n- I canali ora hanno un nuovo pulsante di Condivisione Veloce a destra dei messaggi.\n\nPiù info su questo aggiornamento:\nhttps://telegram.org/blog/supergroups</string>
     <string name="updateBuild">677</string>
+    <string name="UseSystemEmoji">Use System Emoji Font</string>
 </resources>

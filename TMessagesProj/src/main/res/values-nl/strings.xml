@@ -3,7 +3,7 @@
 <!--https://www.transifex.com/projects/p/telegram/language/nl/members/-->
 
 <resources>
-    <string name="AppName">Telegram</string>
+    <string name="AppName">Moegram</string>
     <string name="AppNameBeta">Telegram Bèta</string>
     <string name="LanguageName">Nederlands</string>
     <string name="LanguageNameInEnglish">Dutch</string>
@@ -1012,4 +1012,5 @@
     <!--update text-->
     <string name="updateText">Telegram voor Android is bijgewerkt. Nieuw in versie 3.3.0:\n\n- Meerdere beheerders in groepen, naast het wijzigen van de groepsnaam en afbeelding kunnen beheerders ook leden toevoegen en verwijderen.\n- Groepen die de limiet van 200 deelnemers hebben bereikt kunnen worden geüpgraded naar supergroepen met maximaal 1000 deelnemers.\n- Snel delen in kanalen via de knop rechts van de berichten.\n\nMeer informatie over deze update is hier te vinden:\nhttps://telegram.org/blog/supergroups</string>
     <string name="updateBuild">677</string>
+    <string name="UseSystemEmoji">Use System Emoji Font</string>
 </resources>

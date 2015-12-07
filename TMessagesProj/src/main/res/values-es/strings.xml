@@ -3,7 +3,7 @@
 <!--Translation by Borja Campina, Edited by Victor Espinoza and Francisco Vila-->
 
 <resources>
-    <string name="AppName">Telegram</string>
+    <string name="AppName">Moegram</string>
     <string name="AppNameBeta">Telegram Beta</string>
     <string name="LanguageName">Español</string>
     <string name="LanguageNameInEnglish">Spanish</string>
@@ -1012,4 +1012,5 @@
     <!--update text-->
     <string name="updateText">Telegram para Android ha sido actualizada. Novedades en la versión 3.3.0:\n\n- Ahora los grupos pueden tener múltiples administradores, con la habilidad de cambiar la foto de perfil y el nombre del grupo, además de añadir y expulsar miembros.\n- Los grupos que han alcanzado los 200 usuarios, podrán ser convertidos en supergrupos con una capacidad de 1000 miembros.\n- Los canales tienen un nuevo botón para compartir contenidos más rápido, justo al lado de los mensajes.\n\nMás sobre esta actualización:\nhttps://telegram.org/blog/supergroups</string>
     <string name="updateBuild">677</string>
+    <string name="UseSystemEmoji">Use System Emoji Font</string>
 </resources>
