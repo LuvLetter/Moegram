@@ -30,7 +30,7 @@ When on an OS X with [Homebrew](http://brew.sh/) and [Homebrew Cask](http://cask
 brew install android-sdk android-ndk
 brew cask install android-studio
 ```
-I don't recommend using Android SDK or Android Studio to install NDK, since you will end up in a mess of file permissions and build errors.
+**DO NOT** let Android SDK or Android Studio to install NDK on OS X, or you will end up in a mess of file permissions and build errors. **DO** install them using Homebrew or any package manager.
 
 ### Create Project
 
